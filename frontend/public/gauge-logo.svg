@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  <rect width="40" height="40" rx="10" fill="#161F30" stroke="#2A374A" stroke-width="1.5"/>
+  <!-- Gauge dial arc -->
+  <path d="M10 27 A 13 13 0 1 1 30 27" fill="none" stroke="#2A374A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M10 27 A 13 13 0 0 1 25 9.5" fill="none" stroke="url(#gaugeGrad)" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- Dial center hub -->
+  <circle cx="20" cy="22" r="3" fill="#6366F1" />
+  <!-- Needle -->
+  <line x1="20" y1="22" x2="27" y2="13" stroke="#F1F5F9" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

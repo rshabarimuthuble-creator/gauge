@@ -1,0 +1,12 @@
+import logging
+import sys
+
+def setup_logging(log_level: str = "INFO") -> None:
+    """Configures structured application logging."""
+    logging.basicConfig(
+        level=getattr(logging, log_level.upper(), logging.INFO),
+        format="%(asctime)s | %(levelname)-7s | %(name)s:%(funcName)s:%(lineno)d - %(message)s",
+        handlers=[logging.StreamHandler(sys.stdout)],
+    )
+
+logger = logging.getLogger("gauge")

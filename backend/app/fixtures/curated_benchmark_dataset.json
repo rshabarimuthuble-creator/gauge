@@ -1,0 +1,368 @@
+{
+  "name": "Gauge General Reasoning & Capabilities Suite",
+  "version": "v1.0.0",
+  "description": "Standardized internal evaluation suite of 36 curated test cases spanning arithmetic, logic, knowledge retrieval, structured JSON, partial-credit multi-part questions, and instruction following.",
+  "provenance": "synthetic - Gauge Benchmark Suite v1.0. Developed internally for agent reasoning, structured output, and instruction-following evaluation. Not an externally standardized dataset.",
+  "test_cases": [
+    {
+      "case_identifier": "GAUGE-MATH-01",
+      "input_prompt": "What is 17 multiplied by 14? Answer with just the number.",
+      "expected_output": "238",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Integer arithmetic multiplication",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-MATH-02",
+      "input_prompt": "Solve for x: 3x - 15 = 45. Provide just the value of x.",
+      "expected_output": "20",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Linear algebra single-variable equation",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-MATH-03",
+      "input_prompt": "A car travels at 60 mph for 2.5 hours. How many miles does it travel? Provide just the number.",
+      "expected_output": "150",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Distance formula word problem",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-MATH-04",
+      "input_prompt": "Calculate a 15% tip on an $80.00 restaurant bill. Give the tip amount in dollars.",
+      "expected_output": "$12",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Percentage calculation with currency formatting",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-MATH-05",
+      "input_prompt": "What is the square root of 144 plus the square root of 81? Answer with just the number.",
+      "expected_output": "21",
+      "category": "mathematics",
+      "difficulty": "medium",
+      "scoring_method": "exact_match",
+      "criteria": "Radical arithmetic (12 + 9 = 21)",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"medium\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-MATH-06",
+      "input_prompt": "If an item originally costs $250 with a 20% discount, and sales tax is 8% on the discounted price, what is the final price? Provide only the dollar amount.",
+      "expected_output": "$216",
+      "category": "mathematics",
+      "difficulty": "medium",
+      "scoring_method": "normalized_match",
+      "criteria": "Multi-step percentage and sales tax calculation ($200 * 1.08 = $216)",
+      "metadata_json": "{\"category\": \"mathematics\", \"difficulty\": \"medium\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-01",
+      "input_prompt": "All squares are rectangles. Some rectangles are red. Does it necessarily follow that all red shapes are squares? Answer with Yes or No.",
+      "expected_output": "No",
+      "category": "logic",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Syllogistic deductive reasoning",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-02",
+      "input_prompt": "If Monday is in 3 days, what day was yesterday? Answer with just the day name.",
+      "expected_output": "Thursday",
+      "category": "logic",
+      "difficulty": "medium",
+      "scoring_method": "normalized_match",
+      "criteria": "Calendar temporal reasoning (Today is Friday, yesterday was Thursday)",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"medium\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-03",
+      "input_prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost in cents? Answer with just the number.",
+      "expected_output": "5",
+      "category": "logic",
+      "difficulty": "medium",
+      "scoring_method": "normalized_match",
+      "criteria": "Cognitive reflection test item (Ball is 5 cents, bat is $1.05)",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"medium\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-04",
+      "input_prompt": "Which weighs more: two pounds of feathers or one pound of bricks? Answer with feathers or bricks.",
+      "expected_output": "feathers",
+      "category": "logic",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Comparison of unequal absolute quantities (2 lbs > 1 lb)",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-05",
+      "input_prompt": "Identify the next number in this sequence: 2, 4, 8, 16, 32, ___. Answer with only the number.",
+      "expected_output": "64",
+      "category": "logic",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Powers of two sequence continuation",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-LOGIC-06",
+      "input_prompt": "Mary's father has 5 daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter? Answer with just the name.",
+      "expected_output": "Mary",
+      "category": "logic",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Semantic premise extraction riddle",
+      "metadata_json": "{\"category\": \"logic\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-01",
+      "input_prompt": "What is the capital city of Australia? Answer with just the city name.",
+      "expected_output": "Canberra",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "World geography capital identification",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-02",
+      "input_prompt": "What is the chemical symbol for gold on the periodic table? Answer with just the 2-letter symbol.",
+      "expected_output": "Au",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Chemistry element symbol recall",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-03",
+      "input_prompt": "Which theoretical physicist published the general theory of relativity? Answer with just the surname.",
+      "expected_output": "Einstein",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Physics history factuality",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-04",
+      "input_prompt": "Which planet in our Solar System is closest in orbit to the Sun? Answer with just the planet name.",
+      "expected_output": "Mercury",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Astronomy planetary order",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-05",
+      "input_prompt": "In which calendar year did the Apollo 11 mission land humans on the Moon? Answer with just the 4-digit year.",
+      "expected_output": "1969",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Spaceflight historical milestone year",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-FACT-06",
+      "input_prompt": "What is the most abundant chemical element in Earth's atmosphere by volume? Answer with just the gas name.",
+      "expected_output": "Nitrogen",
+      "category": "knowledge",
+      "difficulty": "easy",
+      "scoring_method": "normalized_match",
+      "criteria": "Atmospheric science factuality (~78% Nitrogen)",
+      "metadata_json": "{\"category\": \"knowledge\", \"difficulty\": \"easy\", \"scoring_method\": \"normalized_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-01",
+      "input_prompt": "Extract user info into a JSON object with keys 'username' and 'age': 'Alex is 29 years old.' Output valid JSON only.",
+      "expected_output": "{\"username\": \"Alex\", \"age\": 29}",
+      "category": "structured_json",
+      "difficulty": "easy",
+      "scoring_method": "structured_output",
+      "criteria": "Exact JSON key extraction and integer typing",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"easy\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-02",
+      "input_prompt": "Parse the route into a JSON object with keys 'origin' and 'destination': 'Flight 102 departs from SFO and arrives in JFK.' Output valid JSON only.",
+      "expected_output": "{\"origin\": \"SFO\", \"destination\": \"JFK\"}",
+      "category": "structured_json",
+      "difficulty": "easy",
+      "scoring_method": "structured_output",
+      "criteria": "JSON route extraction",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"easy\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-03",
+      "input_prompt": "Create a JSON object for a 2D Cartesian point with integer coordinates x=10 and y=-5. Output valid JSON only.",
+      "expected_output": "{\"x\": 10, \"y\": -5}",
+      "category": "structured_json",
+      "difficulty": "easy",
+      "scoring_method": "structured_output",
+      "criteria": "JSON coordinate formatting with signed integers",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"easy\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-04",
+      "input_prompt": "Format this server status report into JSON with boolean 'healthy' and integer 'active_nodes': 'All 8 cluster nodes are active and operating normally.' Output valid JSON only.",
+      "expected_output": "{\"healthy\": true, \"active_nodes\": 8}",
+      "category": "structured_json",
+      "difficulty": "medium",
+      "scoring_method": "structured_output",
+      "criteria": "JSON boolean and integer structure mapping",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"medium\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-05",
+      "input_prompt": "Convert the following bibliographic reference into JSON with keys 'title', 'author', 'year': 'Dune by Frank Herbert, published in 1965.' Output valid JSON only.",
+      "expected_output": "{\"title\": \"Dune\", \"author\": \"Frank Herbert\", \"year\": 1965}",
+      "category": "structured_json",
+      "difficulty": "medium",
+      "scoring_method": "structured_output",
+      "criteria": "Multi-field entity extraction into typed JSON",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"medium\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-JSON-06",
+      "input_prompt": "Extract the inventory item into JSON with keys 'name', 'price', 'in_stock': 'Wireless Mouse costs $24.99 and is currently available.' Output valid JSON only.",
+      "expected_output": "{\"name\": \"Wireless Mouse\", \"price\": 24.99, \"in_stock\": true}",
+      "category": "structured_json",
+      "difficulty": "medium",
+      "scoring_method": "structured_output",
+      "criteria": "String, float, and boolean schema adherence",
+      "metadata_json": "{\"category\": \"structured_json\", \"difficulty\": \"medium\", \"scoring_method\": \"structured_output\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-01",
+      "input_prompt": "List the three primary colors in the additive RGB color model, separated by commas.",
+      "expected_output": "red, green, blue",
+      "category": "multi_part",
+      "difficulty": "easy",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies primary light colors. Pass threshold: 67%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"easy\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"red\", \"green\", \"blue\"], \"pass_threshold\": 0.67, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-02",
+      "input_prompt": "Name the four terrestrial (rocky inner) planets in our Solar System, separated by commas.",
+      "expected_output": "Mercury, Venus, Earth, Mars",
+      "category": "multi_part",
+      "difficulty": "medium",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies inner terrestrial planets. Pass threshold: 75%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"medium\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"Mercury\", \"Venus\", \"Earth\", \"Mars\"], \"pass_threshold\": 0.75, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-03",
+      "input_prompt": "List three major public cloud infrastructure providers (hyperscalers), separated by commas.",
+      "expected_output": "AWS, Azure, Google Cloud",
+      "category": "multi_part",
+      "difficulty": "easy",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies major cloud vendors. Pass threshold: 67%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"easy\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"AWS\", \"Azure\", \"Google Cloud\"], \"pass_threshold\": 0.67, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-04",
+      "input_prompt": "Name the three branches of the United States federal government, separated by commas.",
+      "expected_output": "executive, legislative, judicial",
+      "category": "multi_part",
+      "difficulty": "easy",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies constitutional branches. Pass threshold: 67%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"easy\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"executive\", \"legislative\", \"judicial\"], \"pass_threshold\": 0.67, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-05",
+      "input_prompt": "List the four canonical nitrogenous nucleotide bases found in DNA, separated by commas.",
+      "expected_output": "adenine, thymine, cytosine, guanine",
+      "category": "multi_part",
+      "difficulty": "medium",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies DNA bases (A, T, C, G). Pass threshold: 75%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"medium\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"adenine\", \"thymine\", \"cytosine\", \"guanine\"], \"pass_threshold\": 0.75, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-PART-06",
+      "input_prompt": "Name three common computer science sorting algorithms, separated by commas.",
+      "expected_output": "quicksort, merge sort, bubble sort",
+      "category": "multi_part",
+      "difficulty": "medium",
+      "scoring_method": "partial_credit",
+      "criteria": "Identifies standard sorting algorithms. Pass threshold: 67%",
+      "metadata_json": "{\"category\": \"multi_part\", \"difficulty\": \"medium\", \"scoring_method\": \"partial_credit\", \"expected_items\": [\"quicksort\", \"merge sort\", \"bubble sort\"], \"pass_threshold\": 0.67, \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-INST-01",
+      "input_prompt": "Output the single word 'CONFIRMED' in all capital letters with no punctuation or additional text.",
+      "expected_output": "CONFIRMED",
+      "category": "instruction_following",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Strict uppercase constraint satisfaction",
+      "metadata_json": "{\"category\": \"instruction_following\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-INST-02",
+      "input_prompt": "What color results from mixing yellow and blue paint? Answer in exactly one lowercase word.",
+      "expected_output": "green",
+      "category": "instruction_following",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Length constraint (one word) and casing constraint (lowercase)",
+      "metadata_json": "{\"category\": \"instruction_following\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-INST-03",
+      "input_prompt": "Respond ONLY with the digit 0. Do not include any words, symbols, or punctuation.",
+      "expected_output": "0",
+      "category": "instruction_following",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Single digit constraint",
+      "metadata_json": "{\"category\": \"instruction_following\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-EDGE-01",
+      "input_prompt": "Simulate an intentional incorrect answer by including [SIMULATE_INCORRECT] to verify mismatch detection.",
+      "expected_output": "Expected Pass Token",
+      "category": "edge_case",
+      "difficulty": "easy",
+      "scoring_method": "exact_match",
+      "criteria": "Mismatch detection test: prompt simulates incorrect response",
+      "metadata_json": "{\"category\": \"edge_case\", \"difficulty\": \"easy\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-EDGE-02",
+      "input_prompt": "Simulate an isolated adapter error by including [SIMULATE_ERROR] to verify failure isolation.",
+      "expected_output": "Unreachable Answer",
+      "category": "edge_case",
+      "difficulty": "medium",
+      "scoring_method": "exact_match",
+      "criteria": "Failure isolation test: simulates unhandled exception without crashing run",
+      "metadata_json": "{\"category\": \"edge_case\", \"difficulty\": \"medium\", \"scoring_method\": \"exact_match\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    },
+    {
+      "case_identifier": "GAUGE-EDGE-03",
+      "input_prompt": "Discuss the philosophical boundaries of computational reasoning and intentionality.",
+      "expected_output": "",
+      "category": "edge_case",
+      "difficulty": "hard",
+      "scoring_method": "unscored",
+      "criteria": "Unscored verification: empty expected output tests that open-ended inquiries are classified as unscored rather than failing.",
+      "metadata_json": "{\"category\": \"edge_case\", \"difficulty\": \"hard\", \"scoring_method\": \"unscored\", \"provenance\": \"synthetic - Gauge Benchmark Suite v1.0\"}"
+    }
+  ]
+}
